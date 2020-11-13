@@ -1,7 +1,25 @@
-<h1>All cocktails</h1>
 
-<ul>
-  <% @cocktails.each do |cocktail| %>
-    <li><%= cocktail.name %></li>
-  <% end %>
-</ul>
+
+  <div class="banner"  style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1558383409-ab7ef8db3e01?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2740&q=80');">
+    <h1 class="text-center">All Cocktails</h1>
+  </div>
+<div class="container">
+  <div class="cards">
+    <% @cocktails.each do |cocktail| %>
+      <%= link_to cocktail_path(cocktail), class: 'card-text' do %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cocktail.image_url %>)">
+          <%= cocktail.name %>
+        </div>
+      <% end %>
+    <% end %>
+
+  </div>
+
+</div>
+
+
+ <!-- <ul>
+    <% @cocktails.each do |cocktail| %>
+      <li><%= cocktail.name %></li>
+    <% end %>
+  </ul> -->

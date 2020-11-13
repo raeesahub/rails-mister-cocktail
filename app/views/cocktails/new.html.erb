@@ -1,4 +1,10 @@
-<%= simple_form_for @cocktail do |f| %>
-  <%= f.input :name %>
-  <%= f.submit class: "btn btn-primary" %>
-<% end %>
+<div class="container" class="d-flex justify-content-center">
+  <h1 id="new-cocktail" class="text-center">New Cocktail</h1>
+  <div class="form">
+    <%= simple_form_for @cocktail do |f| %>
+      <%= f.input :name %>
+      <%= f.input :image_url %>
+      <%= f.submit class: "btn btn-outline-light" %>
+    <% end %>
+  </div>
+</div>

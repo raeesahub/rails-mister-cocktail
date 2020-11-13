@@ -1,6 +1,8 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: black;
+  color: white;
+  font-family: "Lora";
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -10,3 +12,32 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+// Non-active navbar link
+
+.navbar-light .navbar-nav .nav-link {
+  color: #FFF3E3;
+  font-family: "Lora";
+  padding: 8px;
+  border-radius: 8px;
+  transition-delay: 0.3ms;
+  &:hover {
+    color: white;
+    border: 1px solid rgba(255,255,255,0.3);
+  }
+}
+
+#title {
+  font-family: "Dancing Script";
+  color: white;
+  margin-left: 16px;
+  font-size: 24px;
+}
+
+/* Active navbar link
+
+.navbar-light .navbar-nav .active > .nav-link {
+  color: white;
+  font-family: "Lato";
+
+}*/
